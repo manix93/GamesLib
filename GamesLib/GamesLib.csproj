@@ -204,8 +204,14 @@
     <Compile Include="Migrations\201807191826113_InitialMigration.Designer.cs">
       <DependentUpon>201807191826113_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807191833347_CreateGamesAndGenresTables.cs" />
+    <Compile Include="Migrations\201807191833347_CreateGamesAndGenresTables.Designer.cs">
+      <DependentUpon>201807191833347_CreateGamesAndGenresTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -290,6 +296,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201807191826113_InitialMigration.resx">
       <DependentUpon>201807191826113_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807191833347_CreateGamesAndGenresTables.resx">
+      <DependentUpon>201807191833347_CreateGamesAndGenresTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
