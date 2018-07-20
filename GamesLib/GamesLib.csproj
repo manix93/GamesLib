@@ -195,6 +195,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GamesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -207,6 +208,10 @@
     <Compile Include="Migrations\201807191833347_CreateGamesAndGenresTables.cs" />
     <Compile Include="Migrations\201807191833347_CreateGamesAndGenresTables.Designer.cs">
       <DependentUpon>201807191833347_CreateGamesAndGenresTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807200738569_ChangeNameGenre.cs" />
+    <Compile Include="Migrations\201807200738569_ChangeNameGenre.Designer.cs">
+      <DependentUpon>201807200738569_ChangeNameGenre.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -279,6 +284,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Games\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -299,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807191833347_CreateGamesAndGenresTables.resx">
       <DependentUpon>201807191833347_CreateGamesAndGenresTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807200738569_ChangeNameGenre.resx">
+      <DependentUpon>201807200738569_ChangeNameGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
