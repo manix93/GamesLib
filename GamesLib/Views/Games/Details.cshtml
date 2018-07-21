@@ -1,20 +1,22 @@
 ﻿@model GamesLib.Models.Game
 
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = "GamesLib: " + @Model.Title;
     //Layout = "_Layout";
 }
 
+<img class="image-cover" src="/Games/RetrieveImage/@Model.Id" alt="" height=300 width=200/>
+
 <h2>@Model.Title</h2>
 
-<h5>Genres</h5>
-<ul>
-    @foreach (var genre in @Model.Genres)
-    {
-        <li>@genre.Name</li>
-    }
+<h5><strong>Genres:</strong></h5>
+<ul class="genres-position">
+   @foreach (var genre in @Model.Genres)
+   {
+       <li>@genre.Name</li>
+   }
 </ul>
 
-<p>Release Date: @Model.ReleaseDate.ToShortDateString()</p>
+<p><strong>Release Date:</strong> @Model.ReleaseDate.ToShortDateString()</p>
 
-<p>@Model.Description</p>
+<p class="justify-paragraph">@Model.Description</p>

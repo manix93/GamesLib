@@ -21,5 +21,7 @@ namespace GamesLib.Models
 
         [Required]
         public ICollection<Genre> Genres { get; set; }
+
+        public byte[] Image { get; set; }
     }
 }

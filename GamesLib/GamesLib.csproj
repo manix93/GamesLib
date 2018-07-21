@@ -232,6 +232,10 @@
     <Compile Include="Migrations\201807211232271_addAnnotationsForGames.Designer.cs">
       <DependentUpon>201807211232271_addAnnotationsForGames.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807212037492_AddImageToGames.cs" />
+    <Compile Include="Migrations\201807212037492_AddImageToGames.Designer.cs">
+      <DependentUpon>201807212037492_AddImageToGames.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Game.cs" />
@@ -573,6 +577,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807211232271_addAnnotationsForGames.resx">
       <DependentUpon>201807211232271_addAnnotationsForGames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807212037492_AddImageToGames.resx">
+      <DependentUpon>201807212037492_AddImageToGames.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
