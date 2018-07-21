@@ -27,3 +27,17 @@ textarea {
     background-color: #2E2E2E;
     color: #fefefe;
 }
+
+.add-game-button {
+    float: right;
+    margin-top: 10px;
+    background-color: #2E2E2E;
+    color: #fefefe;
+}
+
+    .add-game-button:hover {
+        float: right;
+        margin-top: 10px;
+        background-color: #000000;
+        color: #ffffff;
+    }

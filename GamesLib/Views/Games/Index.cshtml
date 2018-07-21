@@ -5,53 +5,54 @@
     ViewBag.Title = "title";
     //Layout = "_Layout";
 }
-
+@Html.ActionLink("Add game", "New", "Games", null, new { @class = "btn btn-lg add-game-button" })
 <h2>Games</h2>
-@Html.ActionLink("Add game", "New", "Games", null, new { @class = "btn btn-success" })
 <table id="games" class="table table-striped table-responsive">
     <thead class="thead-dark">
-    <tr>
-        <th>Title</th>
-        <th>Genres</th>
-        <th>Released Date</th>
-        <th>Action</th>
-    </tr>
+        <tr>
+            <th>Title</th>
+            <th>Genres</th>
+            <th>Released Date</th>
+            <th>Action</th>
+        </tr>
     </thead>
     <tbody>
-    @foreach (var game in @Model)
-    {
-        <tr>
-            <td>@Html.ActionLink(game.Title, "Details", "Games", new { id = game.Id }, null)</td>
-            <td>
-                @foreach (var genre in game.Genres)
-                {
-                    @Html.Raw($"{genre.Name} ")
-                }
-            </td>
-            <td>@game.ReleaseDate.ToShortDateString()</td>
-            <td><button data-game-id="@game.Id" class="btn btn-danger btn-xs js-delete">Delete</button></td>
-        </tr>
-    }
+        @foreach (var game in @Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(game.Title, "Details", "Games", new { id = game.Id }, null)</td>
+                <td>
+                    @foreach (var genre in game.Genres)
+                    {
+                        @Html.Raw($"{genre.Name} ")
+                    }
+                </td>
+                <td>@game.ReleaseDate.ToShortDateString()</td>
+                <td><button data-game-id="@game.Id" class="btn btn-danger btn-xs js-delete">Delete</button></td>
+            </tr>
+        }
     </tbody>
 </table>
 
 @section scripts
 {
-<script>
-    $(document).ready(function() {
-        $("#games .js-delete").on("click", function () {
+    <script>
+        $(document).ready(function () {
+            $("#games").DataTable();
+
+            $("#games").on("click", ".js-delete", function () {
                 var button = $(this);
 
                 if (confirm("Are You sure to delete?")) {
                     $.ajax({
                         url: "api/games/" + button.attr("data-game-id"),
                         method: "DELETE",
-                        success: function() {
+                        success: function () {
                             button.parents("tr").remove();
                         }
                     });
                 }
             });
-    });
-</script>
+        });
+    </script>
 }
