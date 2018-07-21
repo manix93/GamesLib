@@ -228,6 +228,10 @@
     <Compile Include="Migrations\201807201932549_AddGameTitleAsRequired.Designer.cs">
       <DependentUpon>201807201932549_AddGameTitleAsRequired.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807211232271_addAnnotationsForGames.cs" />
+    <Compile Include="Migrations\201807211232271_addAnnotationsForGames.Designer.cs">
+      <DependentUpon>201807211232271_addAnnotationsForGames.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Game.cs" />
@@ -239,6 +243,7 @@
     <Compile Include="ViewModels\GameGenresFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-sandstone.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -565,6 +570,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807201932549_AddGameTitleAsRequired.resx">
       <DependentUpon>201807201932549_AddGameTitleAsRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807211232271_addAnnotationsForGames.resx">
+      <DependentUpon>201807211232271_addAnnotationsForGames.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
