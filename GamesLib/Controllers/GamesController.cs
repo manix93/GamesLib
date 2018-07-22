@@ -26,7 +26,7 @@ namespace GamesLib.Controllers
         public ActionResult Index()
         {
             var games = _context.Games.Include(g => g.Genres).ToList();
-            if (User.IsInRole("CanManageGames"))
+            if (User.IsInRole(RoleName.CanManageGames))
                 return View("IndexForAdmin", games);
 
             return View(games);
@@ -42,7 +42,7 @@ namespace GamesLib.Controllers
             return View(game);
         }
 
-        [Authorize(Roles = "CanManageGames")]
+        [Authorize(Roles = RoleName.CanManageGames)]
         public ActionResult New()
         {
             var gameGenresFromViewModel = new GameGenresFormViewModel()
