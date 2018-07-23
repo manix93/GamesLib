@@ -6,6 +6,10 @@ namespace GamesLib.Models
     public class ExternalLoginConfirmationViewModel
     {
         [Required]
+        [Display(Name = "Last bought game")]
+        public string LastBoughtGame { get; set; }
+
+        [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
     }
@@ -64,6 +68,10 @@ namespace GamesLib.Models
 
     public class RegisterViewModel
     {
+        [Required]
+        [Display(Name = "Last bought game")]
+        public string LastBoughtGame { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

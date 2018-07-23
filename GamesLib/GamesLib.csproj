@@ -18,7 +18,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44384</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -235,6 +235,10 @@
     <Compile Include="Migrations\201807212037492_AddImageToGames.cs" />
     <Compile Include="Migrations\201807212037492_AddImageToGames.Designer.cs">
       <DependentUpon>201807212037492_AddImageToGames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807230730404_AddBoughtGametToUser.cs" />
+    <Compile Include="Migrations\201807230730404_AddBoughtGametToUser.Designer.cs">
+      <DependentUpon>201807230730404_AddBoughtGametToUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -583,6 +587,9 @@
     <EmbeddedResource Include="Migrations\201807212037492_AddImageToGames.resx">
       <DependentUpon>201807212037492_AddImageToGames.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807230730404_AddBoughtGametToUser.resx">
+      <DependentUpon>201807230730404_AddBoughtGametToUser.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -602,7 +609,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>53926</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:53926/</IISUrl>
+          <IISUrl>https://localhost:44384/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

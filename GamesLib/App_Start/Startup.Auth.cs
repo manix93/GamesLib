@@ -54,9 +54,9 @@ namespace GamesLib
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "2098590937134923",
+               appSecret: "ecb79543e347073a6ef9697fe9b533a9");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
