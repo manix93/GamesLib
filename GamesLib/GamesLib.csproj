@@ -247,7 +247,10 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\RoleName.cs" />
+    <Compile Include="Models\Translate.cs" />
+    <Compile Include="Models\TranslateWebApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Secret_Data\API_KEYS.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\GameGenresFormViewModel.cs" />
   </ItemGroup>

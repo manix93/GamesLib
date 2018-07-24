@@ -39,6 +39,12 @@ namespace GamesLib.Controllers
             if (game.Equals(null))
                 return HttpNotFound();
 
+            var language = System.Web.HttpContext.Current.Request.UserLanguages[0];
+            if (!language.Equals("en"))
+            {
+                game.Title = TranslateWebApi.GetTranslatedTextAsync(language, game.Title).Result.text[0];
+                game.Description = TranslateWebApi.GetTranslatedTextAsync(language, game.Description).Result.text[0];
+            }
             return View(game);
         }
 

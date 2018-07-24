@@ -259,3 +259,6 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+# Secret Keys
+/GamesLib/Secret_Data/API_KEYS.cs
